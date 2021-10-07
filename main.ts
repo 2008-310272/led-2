@@ -1,3 +1,19 @@
+input.onButtonPressed(Button.A, function () {
+    for (let Y = 0; Y <= 4; Y++) {
+        for (let X = 0; X <= 4; X++) {
+            led.plot(X, Y)
+            basic.pause(100)
+        }
+    }
+})
+input.onButtonPressed(Button.B, function () {
+    for (let Y = 0; Y <= 4; Y++) {
+        for (let X = 0; X <= 4; X++) {
+            led.plotBrightness(Y, 4 - X, 255)
+            basic.pause(100)
+        }
+    }
+})
 basic.forever(function () {
     for (let Y = 0; Y <= 4; Y++) {
         for (let X = 0; X <= 4; X++) {
