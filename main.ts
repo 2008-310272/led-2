@@ -6,6 +6,10 @@ input.onButtonPressed(Button.A, function () {
         }
     }
 })
+input.onButtonPressed(Button.AB, function () {
+    basic.clearScreen()
+    led.setBrightness(0)
+})
 input.onButtonPressed(Button.B, function () {
     for (let Y = 0; Y <= 4; Y++) {
         for (let X = 0; X <= 4; X++) {
@@ -17,7 +21,7 @@ input.onButtonPressed(Button.B, function () {
 basic.forever(function () {
     for (let Y = 0; Y <= 4; Y++) {
         for (let X = 0; X <= 4; X++) {
-            led.plotBrightness(4 - X, Y, 21)
+            led.plotBrightness(4 - X, Y, 127)
             basic.pause(100)
         }
         for (let X = 0; X <= 4; X++) {
@@ -27,7 +31,7 @@ basic.forever(function () {
     }
     for (let Y = 0; Y <= 4; Y++) {
         for (let X = 0; X <= 4; X++) {
-            led.plotBrightness(X, 4 - Y, 21)
+            led.plotBrightness(X, 4 - Y, 127)
             basic.pause(100)
         }
         for (let X = 0; X <= 4; X++) {
@@ -37,7 +41,7 @@ basic.forever(function () {
     }
     for (let Y = 0; Y <= 4; Y++) {
         for (let X = 0; X <= 4; X++) {
-            led.plotBrightness(4 - Y, X, 21)
+            led.plotBrightness(4 - Y, X, 127)
             basic.pause(100)
         }
         for (let X = 0; X <= 4; X++) {
@@ -47,7 +51,7 @@ basic.forever(function () {
     }
     for (let Y = 0; Y <= 4; Y++) {
         for (let X = 0; X <= 4; X++) {
-            led.plotBrightness(Y, 4 - X, 21)
+            led.plotBrightness(Y, 4 - X, 127)
             basic.pause(100)
         }
         for (let X = 0; X <= 4; X++) {
